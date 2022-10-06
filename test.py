@@ -45,8 +45,8 @@ def display_output(pic1,kpt1,pic2,kpt2,best_match):
 # main function
 if __name__ == '__main__':
 	# giving the path of both of the images
-	first_image_path = 'rm1.jpg'
-	second_image_path = 'rm2.png'
+	first_image_path = 'images/rm1.jpg'
+	second_image_path = 'images/rm2.png'
 
 	# reading the image from there paths
 	img1, img2 = read_image(first_image_path,second_image_path)
