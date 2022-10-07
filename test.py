@@ -1,10 +1,15 @@
 # importing openCV library
 import cv2
+import numpy as np
+from urllib.request import urlopen
+
+
 
 # function to read the images by taking there path
 def read_image(path1,path2):
-	read_img1 = cv2.imread(path1)
-	read_img2 = cv2.imread(path2)
+    
+	read_img1 = cv2.imdecode(np.asarray(bytearray(urlopen(path1).read()), dtype=np.uint8), -1)
+	read_img2 = cv2.imdecode(np.asarray(bytearray(urlopen(path2).read()), dtype=np.uint8), -1)
 	return (read_img1,read_img2)
 
 # function to convert images from RGB to gray scale
@@ -45,8 +50,8 @@ def display_output(pic1,kpt1,pic2,kpt2,best_match):
 # main function
 if __name__ == '__main__':
 	# giving the path of both of the images
-	first_image_path = 'images/rm1.jpg'
-	second_image_path = 'images/rm2.png'
+	first_image_path = 'https://storage.googleapis.com/guber_pharmacy/BNU/10012253/www.benu.ee-media-.thumb-.700x800-create-10012253-P013553-1611606393.png'
+	second_image_path = 'https://storage.googleapis.com/guber_pharmacy/AZT/7001601/www.azeta.ee-media-cache-ev_product_large-79-74-0f5ee0f622a007219ff0c90587ea.jpg'
 
 	# reading the image from there paths
 	img1, img2 = read_image(first_image_path,second_image_path)
