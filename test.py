@@ -50,8 +50,8 @@ def display_output(pic1,kpt1,pic2,kpt2,best_match):
 # main function
 if __name__ == '__main__':
 	# giving the path of both of the images
-	first_image_path = 'https://storage.googleapis.com/guber_pharmacy/BNU/10012253/www.benu.ee-media-.thumb-.700x800-create-10012253-P013553-1611606393.png'
-	second_image_path = 'https://storage.googleapis.com/guber_pharmacy/AZT/7001601/www.azeta.ee-media-cache-ev_product_large-79-74-0f5ee0f622a007219ff0c90587ea.jpg'
+	first_image_path = 'https://storage.googleapis.com/guber_pharmacy/AZT/7001601/www.azeta.ee-media-cache-ev_product_large-79-74-0f5ee0f622a007219ff0c90587ea.jpg'
+	second_image_path = 'https://storage.googleapis.com/guber_pharmacy/BNU/10011037/www.benu.ee-media-.thumb-.700x800-create-10011037-P013631-1611606207.png'
 
 	# reading the image from there paths
 	img1, img2 = read_image(first_image_path,second_image_path)
